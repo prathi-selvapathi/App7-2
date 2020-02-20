@@ -23,9 +23,371 @@ Known Issues:
 blah, blah, blah, blah
 -->
 
-   <head> 
-      
-	   PUT YOUR OLD CODE IN HERE
-	   
-   </body>
+<script>
+        var allergy_count = 0;
+        var cold_count = 0;
+
+
+        function allergyAdd(){
+       		allergy_count = allergy_count + 1;
+		alert("allergy count: " + allergy_count);
+	}
+	
+	function coldAdd() {
+		cold_count = cold_count + 1;
+		alert("cold Count: " + cold_count);
+	}
+	
+	function results() {
+		var total  = allergy_count + cold_count;
+		alert("allergy percentage: " + (allergy_count / total) * 100 + 
+		      "\cold percentage: " + (cold_count / total) * 100);
+	}
+		    
+
+</script>
+
+
+<!-- This produces the footer -->
+<style>	
+<footer class="w3-bottom w3-container w3-flat-carrot">
+	<p>DIY!</p>
+</footer>
+
+.body {
+     margin: 0em;
+}
+
+.page {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -100vw;
+    overflow-y: auto;
+    z-index: 0;
+    background-color: hsl(0,0%,100%);
+}
+
+  .page:target {
+    left: 0vw;
+    z-index: 1;
+}
+</style>
+<footer class="w3-bottom w3-container w3-flat-carrot">
+	<p>DIY!</p>
+</footer>
+
+<body>
+<div id="header" class="w3-container w3-flat-carrot">
+	<h1>Cold or Allergies?</h1>
+</div>
+	
+<!-- This produces the intro statement on the "home page" of the website -->	
+<div id="content" class="w3-container">
+	<p>Are you feeling like you might have a cold but wonder if it is allergies. Answer a few short questions to find out!</p>
+	
+	<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a>
+	
+	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
+ 	
+	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
+
+<!-- This produces the new page for question 1 and the footer -->
+<style>	
+<footer class="w3-bottom w3-container w3-flat-carrot">
+	<p>DIY!</p>
+</footer>
+
+.body {
+     margin: 0em;
+}
+
+.page {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -100vw;
+    overflow-y: auto;
+    z-index: 0;
+    background-color: hsl(0,0%,100%);
+}
+
+  .page:target {
+    left: 0vw;
+    z-index: 1;
+}
+</style>
+
+<!-- This produces the question for question 1 and the buttons -->
+<div class="page" id="one">
+	<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Question 1</h1>
+	</div>
+	
+    	<div id="content" class="w3-container">
+        <p>Are your eyes watery or itchy?</p>    
+    	</div>
+	<a href="#two" class="w3-btn w3-black" onclick="allergyAdd();"> yes </a>
+	<a href="#two" class="w3-btn w3-black" onclick="coldAdd();"> no </a>
+	<div>
+
+<!-- This produces the new page for question 2 and the footer -->
+<div>
+<style>	
+<footer class="w3-bottom w3-container w3-flat-carrot">
+	<p>DIY!</p>
+</footer>
+
+.body {
+     margin: 0em;
+}
+
+.page {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -100vw;
+    overflow-y: auto;
+    z-index: 0;
+    background-color: hsl(0,0%,100%);
+}
+
+  .page:target {
+    left: 0vw;
+    z-index: 1;
+}
+</style>
+
+<!-- This produces the new question for question 2 and buttons -->
+
+<div class="page" id="two">
+	<div class="w3-container w3-flat-carrot">
+		<h1>Question 2</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+	<p>Do you have a fever?</p>
+	<a href="#three" class="w3-btn w3-black" onclick="coldAdd();"> yes </a>
+	<a href="#three" class="w3-btn w3-black" onclick="allergyAdd();"> no </a>
+	<div>
+		
+<!-- This produces the new page for question 3 and the footer -->
+</div>	
+<style>	
+
+<footer class="w3-bottom w3-container w3-flat-carrot">
+	<p>DIY!</p>
+</footer>
+
+.body {
+     margin: 0em;
+}
+
+.page {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -100vw;
+    overflow-y: auto;
+    z-index: 0;
+    background-color: hsl(0,0%,100%);
+}
+
+  .page:target {
+    left: 0vw;
+    z-index: 1;
+}
+</style>
+
+<footer class="w3-bottom w3-container w3-flat-carrot">
+	<p>DIY!</p>
+</footer>
+
+<!-- This produces the question for question 3 and the buttons -->
+<div class="page" id="three">
+	<div class="w3-container w3-flat-carrot">
+		<h1>Question 3</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+	<p>Do you have a sore throat?</p>
+	<a href="#four" class="w3-btn w3-black" onclick="coldAdd();"> yes </a>
+	<a href="#four" class="w3-btn w3-black" onclick="allergyAdd();"> no </a>
+	</div>
+
+<!-- This produces the new page for question 4 and the footer -->
+</div>	
+
+<style>	
+	
+<footer class="w3-bottom w3-container w3-flat-carrot">
+	<p>DIY!</p>
+</footer>
+
+.body {
+     margin: 0em;
+}
+
+.page {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -100vw;
+    overflow-y: auto;
+    z-index: 0;
+    background-color: hsl(0,0%,100%);
+}
+
+  .page:target {
+    left: 0vw;
+    z-index: 1;
+}
+</style>
+		
+<footer class="w3-bottom w3-container w3-flat-carrot">
+	<p>DIY!</p>
+</footer>
+
+<!-- This produces the new question for question 4 with buttons -->
+<div class="page" id="four">
+	<div class="w3-container w3-flat-carrot">
+		<h1>Question 4</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+	<p>Are your symptoms seasonal or chronic?</p>
+	<a href="#five" class="w3-btn w3-black" onclick="allergyAdd();"> yes </a>
+	<a href="#five" class="w3-btn w3-black" onclick="coldAdd();"> no </a>
+	</div>
+
+<!-- This produces the new page for question 5 and the footer -->
+</div>	
+
+<style>	
+.body {
+     margin: 0em;
+}
+
+.page {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -100vw;
+    overflow-y: auto;
+    z-index: 0;
+    background-color: hsl(0,0%,100%);
+}
+
+  .page:target {
+    left: 0vw;
+    z-index: 1;
+}
+</style>
+
+<footer class="w3-bottom w3-container w3-flat-carrot">
+	<p>DIY!</p>
+</footer>
+
+<!-- This produces the question for question 5 with buttons -->
+<div class="page" id="five">
+	<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Question 5</h1>
+	</div>
+	
+    	<div id="content" class="w3-container">
+        <p>Do you experience chills?</p>    
+    	</div>
+	<a href="#six" class="w3-btn w3-black" onclick="coldAdd();"> yes </a>
+	<a href="#six" class="w3-btn w3-black" onclick="allergyAdd();"> no </a>
+	<div>
+<!-- This produces a new page for question 6 -->
+<div>
+<style>	
+.body {
+     margin: 0em;
+}
+
+.page {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -100vw;
+    overflow-y: auto;
+    z-index: 0;
+    background-color: hsl(0,0%,100%);
+}
+
+  .page:target {
+    left: 0vw;
+    z-index: 1;
+}
+</style>
+
+<footer class="w3-bottom w3-container w3-flat-carrot">
+	<p>DIY!</p>
+</footer>
+
+<!-- This produces the question for question 6 with buttons -->
+<div class="page" id="six">
+	<div id="header" class="w3-container w3-flat-carrot">
+		<h1>Question 6</h1>
+	</div>
+	
+    	<div id="content" class="w3-container">
+        <p>Do you experience wheezing?</p>    
+    	</div>
+	<a href="#seven" class="w3-btn w3-black" onclick="allergyAdd();"> yes </a>
+	<a href="#seven" class="w3-btn w3-black" onclick="coldAdd();"> no </a>
+	<div>
+<!-- This creates a new page -->
+<div>
+<style>	
+.body {
+     margin: 0em;
+}
+
+.page {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -100vw;
+    overflow-y: auto;
+    z-index: 0;
+    background-color: hsl(0,0%,100%);
+}
+
+  .page:target {
+    left: 0vw;
+    z-index: 1;
+}
+</style>
+		
+<footer class="w3-bottom w3-container w3-flat-carrot">
+	<p>DIY!</p>
+</footer>
+
+</body>
 </html>
+
+<!-- This produces the results page -->
+<div class="page" id="seven">
+	<!-- This produces the header with the title "Results" and an orange color -->
+	<div id="header" class="w3-bottom w3-container w3-flat-carrot">
+		<h1>Results</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+		<!-- This is the results -->
+		<p>Results</p>
+		<a class="w3-btn w3-black" onclick="results();"> View Results </a>
+	<div>
+</div>
+
