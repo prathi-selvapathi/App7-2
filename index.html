@@ -23,13 +23,13 @@ blah, blah, blah, blah
 -->
 
 <script>
-        var flu_count = 0;
+        var allergy_count = 0;
         var cold_count = 0;
 
 
-        function fluAdd(){
-       		flu_count = flu_count + 1;
-		alert("flu count: " + flu_count);
+        function allergyAdd(){
+       		allergy_count = allergy_count + 1;
+		alert("allergy count: " + allergy_count);
 	}
 	
 	function coldAdd() {
@@ -38,8 +38,8 @@ blah, blah, blah, blah
 	}
 	
 	function results() {
-		var total  = flu_count + cold_count;
-		alert("flu percentage: " + (flu_count / total) * 100 + 
+		var total  = allergy_count + cold_count;
+		alert("allergy percentage: " + (allergy_count / total) * 100 + 
 		      "\cold percentage: " + (cold_count / total) * 100);
 	}
 		    
@@ -73,14 +73,13 @@ blah, blah, blah, blah
     z-index: 1;
 }
 </style>
-
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
 </footer>
 
 <body>
 <div id="header" class="w3-container w3-flat-carrot">
-	<h1>Cold or Flu?</h1>
+	<h1>Cold or Allergies?</h1>
 </div>
 	
 <!-- This produces the intro statement on the "home page" of the website -->	
@@ -390,4 +389,3 @@ blah, blah, blah, blah
 		<a class="w3-btn w3-black" onclick="results();"> View Results </a>
 	<div>
 </div>
-
