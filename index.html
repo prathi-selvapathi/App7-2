@@ -23,13 +23,13 @@ blah, blah, blah, blah
 -->
 
 <script>
-        var allergy_count = 0;
+        var flu_count = 0;
         var cold_count = 0;
 
 
         function allergyAdd(){
-       		allergy_count = allergy_count + 1;
-		alert("allergy count: " + allergy_count);
+       		flu_count = flu_count + 1;
+		alert("flu count: " + flu_count);
 	}
 	
 	function coldAdd() {
@@ -38,8 +38,8 @@ blah, blah, blah, blah
 	}
 	
 	function results() {
-		var total  = allergy_count + cold_count;
-		alert("allergy percentage: " + (allergy_count / total) * 100 + 
+		var total  = flu_count + cold_count;
+		alert("flu percentage: " + (flu_count / total) * 100 + 
 		      "\cold percentage: " + (cold_count / total) * 100);
 	}
 		    
