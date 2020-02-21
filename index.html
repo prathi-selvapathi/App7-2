@@ -6,8 +6,7 @@ THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.
  
  
 Authors in chronological order of contribution:
-Author 1
-Author 2
+Prathi Selvapathi
  
 Further Information:
 http://diystream.cns.utexas.edu/
@@ -17,20 +16,20 @@ Timothy Riedel
 triedel@utexas.edu
  
 Brief Description of Goal of Code:
-blah, blah, blah,
+The goal of this code is to allow an individual to better determine whether they have the common cold or the flue
  
 Known Issues:
 blah, blah, blah, blah
 -->
 
 <script>
-        var allergy_count = 0;
+        var flu_count = 0;
         var cold_count = 0;
 
 
-        function allergyAdd(){
-       		allergy_count = allergy_count + 1;
-		alert("allergy count: " + allergy_count);
+        function fluAdd(){
+       		flu_count = flu_count + 1;
+		alert("flu count: " + flu_count);
 	}
 	
 	function coldAdd() {
@@ -39,8 +38,8 @@ blah, blah, blah, blah
 	}
 	
 	function results() {
-		var total  = allergy_count + cold_count;
-		alert("allergy percentage: " + (allergy_count / total) * 100 + 
+		var total  = flu_count + cold_count;
+		alert("flu percentage: " + (flu_count / total) * 100 + 
 		      "\cold percentage: " + (cold_count / total) * 100);
 	}
 		    
@@ -54,33 +53,21 @@ blah, blah, blah, blah
 	<p>DIY!</p>
 </footer>
 
-.body {
-     margin: 0em;
+.body {   
 }
-
-.page {
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    left: -100vw;
-    overflow-y: auto;
-    z-index: 0;
-    background-color: hsl(0,0%,100%);
+.page {   
 }
-
   .page:target {
-    left: 0vw;
-    z-index: 1;
 }
 </style>
+
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>DIY!</p>
 </footer>
 
 <body>
 <div id="header" class="w3-container w3-flat-carrot">
-	<h1>Cold or Allergies?</h1>
+	<h1>Cold or Flu?</h1>
 </div>
 	
 <!-- This produces the intro statement on the "home page" of the website -->	
