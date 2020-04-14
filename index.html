@@ -16,7 +16,7 @@ Timothy Riedel
 triedel@utexas.edu
  
 Brief Description of Goal of Code:
-The goal of this code is to allow an individual to better determine whether they have the common cold or the flu
+This goal will help an individual determine if they have Coronavirus, the cold, the flu, or seasonal allergies.
  
 Known Issues:
 Having trouble adding the code to resize the image, and I can't seem to get the results to work without it popping up as an alert
@@ -31,29 +31,35 @@ Having trouble adding the code to resize the image, and I can't seem to get the 
    </head> 
 
 <!-- This produces the function for the app -->
-
 <script>
-        var flu_count = 0;
+        var covid19_count = 0;
         var cold_count = 0;
+	var flu_count = 0;
+	var allergy_count = 0
 
-
-        function fluAdd(){
-       		flu_count = flu_count + 1;
-		alert("flu count: " + flu_count);
+        function covid19Add(){
+       		covid19_count = covid19_count + 1;
+		alert("Covid-19 count: " + covid19_count);
 	}
-	
 	function coldAdd() {
 		cold_count = cold_count + 1;
-		alert("cold Count: " + cold_count);
+		alert("Cold Count: " + cold_count);
 	}
-	
+	function fluAdd() {
+		flu_count = flu_count + 1;
+		alert("Flu Count: " + flu_count);
+	}
+	function allergyAdd() {
+		allergy_count = allergy_count + 1
+		alert("Allergy Count: " + allergy_count);
+	}
 	function results() {
-		var total  = flu_count + cold_count;
-		alert("flu percentage: " + (flu_count / total) * 100 + 
-		      "\cold percentage: " + (cold_count / total) * 100);
-	}
-		    
-
+		var total  = covid19_count + cold_count + flu_count + allergy_count;
+		alert("Covid-19 percentage: " + (covid19_count / total) * 100 +
+		      "\Cold percentage: " + (cold_count / total) * 100 +
+		      "\Flu percentage: " + (flu_count / total) * 100 +
+		      "\Allergy percentage: " + (allergy_count / total) * 100);
+	}		  
 </script>
 
 
