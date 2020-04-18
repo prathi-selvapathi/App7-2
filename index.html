@@ -59,7 +59,7 @@ Having trouble adding the code to resize the image, and I can't seem to get the 
 		flu_count = flu_count + 1;
 		alert("Flu Count: " + flu_count);
 	}
-	function coldfluallergies() {
+	function coldfluallergy() {
 		cold_count = cold_count + 1;
 		alert("Cold Count: " + cold_count);
 		flu_count = flu_count + 1;
@@ -67,13 +67,13 @@ Having trouble adding the code to resize the image, and I can't seem to get the 
 		allergy_count = allergy_count + 1
 		alert("Allergy Count: " + allergy_count);
 	}
-	function coldallergies() {
+	function coldallergy() {
 		cold_count = cold_count + 1;
 		alert("Cold Count: " + cold_count);
 		allergy_count = allergy_count + 1
 		alert("Allergy Count: " + allergy_count);
 	}
-	function covidcoldallergies() {
+	function covidcoldallergy() {
 		covid19_count = covid19_count + 1;
 		alert("Covid-19 Count: " + covid19_count);
 		cold_count = cold_count + 1;
@@ -129,16 +129,13 @@ Having trouble adding the code to resize the image, and I can't seem to get the 
 	
 <!-- This produces the intro statement on the "home page" of the website -->	
 <div id="content" class="w3-container">
-	<p>Are you feeling like you might have a cold but wonder if it is's the flu. Answer a few short questions to find out!</p>
+	<p>Are you wondering if the symptoms you are experiencing are related to Covid-19?. Answer a few short questions to find out!</p>
 	
 	<a href="#one" class="w3-btn w3-grey w3-round"> Get Started </a>
 	
 	<p>The following code has been developed by students and/or researchers of the Freshman Research Initiative DIY Diagnostics Stream at The University of Texas at 		Austin.  This code is shared for demonstration purposes and should not be considered a product -- it is for entertainment purposes only. Any user of this code 			does so at their own risk. Members of the DIY Stream, FRI, and The University of Texas system are not liable for anything related to this code.</p>
  	
 	<p>THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.</p>
-
-	<!-- This produces the image for the home page -->
-	<img src="https://www.medstar911.org/wp-content/uploads/2019/12/Flu-Image.jpg">
 
 	<!-- This codes for the resizing of the image. It is coded with <style> for formatting -->
 	<style>	
@@ -188,10 +185,12 @@ Having trouble adding the code to resize the image, and I can't seem to get the 
 	</div>
 	
     	<div id="content" class="w3-container">
-        <p>do you experience chills?</p>    
+        <p>What is the length of your symptoms?</p>    
     	</div>
-	<a href="#two" class="w3-btn w3-black" onclick="fluAdd();"> yes </a>
-	<a href="#two" class="w3-btn w3-black" onclick="coldAdd();"> no </a>
+	<a href="#two" class="w3-btn w3-black" onclick="covid19Add();"> 7-25 days </a>
+	<a href="#two" class="w3-btn w3-black" onclick="coldAdd();"> less than 14 days </a>
+	<a href="#two" class="w3-btn w3-black" onclick="fluAdd();"> 7-14 days </a>
+	<a href="#two" class="w3-btn w3-black" onclick="allergyAdd();"> less than 14 days </a>
 	<div>
 
 <!-- This produces the new page for question 2 and the footer. It is coded within <style> for formatting -->
@@ -233,9 +232,9 @@ Having trouble adding the code to resize the image, and I can't seem to get the 
 	</div>
 	
 	<div id="content" class="w3-container">
-	<p>Do you have a headache?</p>
-	<a href="#three" class="w3-btn w3-black" onclick="fluAdd();"> yes </a>
-	<a href="#three" class="w3-btn w3-black" onclick="coldAdd();"> no </a>
+	<p>Do you experience shortness of breath?</p>
+	<a href="#three" class="w3-btn w3-black" onclick="covidAdd();"> sometimes </a>
+	<a href="#three" class="w3-btn w3-black" onclick="coldfluallergyAdd();"> no </a>
 	<div>
 		
 <!-- This produces the new page for question 3 and the footer. It is coded with <style> for formatting -->
@@ -278,9 +277,10 @@ Having trouble adding the code to resize the image, and I can't seem to get the 
 	</div>
 	
 	<div id="content" class="w3-container">
-	<p>Do you have a fever</p>
-	<a href="#four" class="w3-btn w3-black" onclick="fluAdd();"> yes </a>
-	<a href="#four" class="w3-btn w3-black" onclick="coldAdd();"> no </a>
+	<p>How is your cough?</p>
+	<a href="#four" class="w3-btn w3-black" onclick="covidfluAdd();"> common (usually dry) </a>
+	<a href="#four" class="w3-btn w3-black" onclick="coldAdd();"> common (mild) </a>
+	<a href="#four" class="w3-btn w3-black" onclick="allergyAdd();"> rare (usually dry unless triggers asthma) </a>
 	</div>
 
 <!-- This produces the new page for question 4 and the footer. It is coded with <style> for formatting -->
