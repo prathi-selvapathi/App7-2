@@ -352,9 +352,177 @@ Having trouble adding the code to resize the image, and I can't seem to get the 
 	
 	<div id="content" class="w3-container">
 	<p>How often do you have a runny or stuff nose?</p>
-	<a href="#six" class="w3-btn w3-black" onclick="covidAdd();"> rarely </a>
-	<a href="#six" class="w3-btn w3-black" onclick="coldallergyAdd();"> commonly </a>
+	<a href="#six" class="w3-btn w3-black" onclick="covidAdd();"> rare </a>
+	<a href="#six" class="w3-btn w3-black" onclick="coldallergyAdd();"> common </a>
 	<a href="#six" class="w3-btn w3-black" onclick="fluAdd();"> sometimes </a>
+	</div>
+	
+<!-- This produces the new page for question 6 and the footer. It is coded with <style> for formatting -->
+</div>	
+
+<style>	
+.body {
+     margin: 0em;
+}
+
+.page {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -100vw;
+    overflow-y: auto;
+    z-index: 0;
+    background-color: hsl(0,0%,100%);
+}
+
+  .page:target {
+    left: 0vw;
+    z-index: 1;
+}
+</style>
+
+<footer class="w3-bottom w3-container w3-flat-carrot">
+	<p>DIY!</p>
+</footer>
+
+<!-- This produces the new question for question 6 with buttons. w3-btn w3-black makes it a black button. onclick="fluAdd() adds one count to your flu count if you click on yes, and onclick="coldAdd() adds one count to your cold count if you click on no. -->
+<div class="page" id="six">
+	<div class="w3-container w3-flat-carrot">
+		<h1>Question 6</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+	<p>Do you have a sore throat?</p>
+	<a href="#seven" class="w3-btn w3-black" onclick="covidfluAdd();"> sometimes </a>
+	<a href="#seven" class="w3-btn w3-black" onclick="coldAdd();"> common </a>
+	<a href="#seven" class="w3-btn w3-black" onclick="allergyAdd();"> sometimes (usually mild) </a>
+	</div>
+
+<!-- This produces the new page for question 7 and the footer. It is coded with <style> for formatting -->
+</div>	
+
+<style>	
+.body {
+     margin: 0em;
+}
+
+.page {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -100vw;
+    overflow-y: auto;
+    z-index: 0;
+    background-color: hsl(0,0%,100%);
+}
+
+  .page:target {
+    left: 0vw;
+    z-index: 1;
+}
+</style>
+
+<footer class="w3-bottom w3-container w3-flat-carrot">
+	<p>DIY!</p>
+</footer>
+
+<!-- This produces the new question for question 7 with buttons. w3-btn w3-black makes it a black button. onclick="fluAdd() adds one count to your flu count if you click on yes, and onclick="coldAdd() adds one count to your cold count if you click on no. -->
+<div class="page" id="seven">
+	<div class="w3-container w3-flat-carrot">
+		<h1>Question 7</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+	<p>How is your fever?</p>
+	<a href="#eight" class="w3-btn w3-black" onclick="covidfluAdd();"> common </a>
+	<a href="#eight" class="w3-btn w3-black" onclick="coldAdd();"> short fever period </a>
+	<a href="#eight" class="w3-btn w3-black" onclick="allergyAdd();"> no fever </a>
+	</div>
+	
+<!-- This produces the new page for question 8 and the footer. It is coded with <style> for formatting -->
+</div>	
+
+<style>	
+.body {
+     margin: 0em;
+}
+
+.page {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -100vw;
+    overflow-y: auto;
+    z-index: 0;
+    background-color: hsl(0,0%,100%);
+}
+
+  .page:target {
+    left: 0vw;
+    z-index: 1;
+}
+</style>
+
+<footer class="w3-bottom w3-container w3-flat-carrot">
+	<p>DIY!</p>
+</footer>
+
+<!-- This produces the new question for question 8 with buttons. w3-btn w3-black makes it a black button. onclick="fluAdd() adds one count to your flu count if you click on yes, and onclick="coldAdd() adds one count to your cold count if you click on no. -->
+<div class="page" id="eight">
+	<div class="w3-container w3-flat-carrot">
+		<h1>Question 8</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+	<p>Do you feel tired and weak?</p>
+	<a href="#nine" class="w3-btn w3-black" onclick="covidcoldallergyAdd();"> sometimes </a>
+	<a href="#nine" class="w3-btn w3-black" onclick="fluAdd();"> common </a>
+	</div>
+	
+<!-- This produces the new page for question 9 and the footer. It is coded with <style> for formatting -->
+</div>	
+
+<style>	
+.body {
+     margin: 0em;
+}
+
+.page {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: -100vw;
+    overflow-y: auto;
+    z-index: 0;
+    background-color: hsl(0,0%,100%);
+}
+
+  .page:target {
+    left: 0vw;
+    z-index: 1;
+}
+</style>
+
+<footer class="w3-bottom w3-container w3-flat-carrot">
+	<p>DIY!</p>
+</footer>
+
+<!-- This produces the new question for question 9 with buttons. w3-btn w3-black makes it a black button. onclick="fluAdd() adds one count to your flu count if you click on yes, and onclick="coldAdd() adds one count to your cold count if you click on no. -->
+<div class="page" id="nine">
+	<div class="w3-container w3-flat-carrot">
+		<h1>Question 9</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+	<p>Do you experience headaches?</p>
+	<a href="#ten" class="w3-btn w3-black" onclick="covidAdd();"> sometimes </a>
+	<a href="#ten" class="w3-btn w3-black" onclick="coldAdd();"> rare </a>
+	<a href="#ten" class="w3-btn w3-black" onclick="fluAdd();"> common </a>
+	<a href="#ten" class="w3-btn w3-black" onclick="allergyAdd();"> sometimes (related to sinus pain) </a>
 	</div>
 
 
