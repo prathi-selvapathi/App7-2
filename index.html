@@ -30,7 +30,7 @@ Having trouble adding the code to resize the image, and I can't seem to get the 
       <link rel="stylesheet" href="w3-colors-flat.css">
    </head> 
 
-<!-- This produces the function for the app -->
+<!-- This produces the functions for the app -->
 <script>
         var covid19_count = 0;
         var cold_count = 0;
@@ -53,13 +53,41 @@ Having trouble adding the code to resize the image, and I can't seem to get the 
 		allergy_count = allergy_count + 1
 		alert("Allergy Count: " + allergy_count);
 	}
+	function covidfluADD() {
+		covid19_count = covid19_count + 1;
+		alert("Covid-19 Count: " + covid19_count);
+		flu_count = flu_count + 1;
+		alert("Flu Count: " + flu_count);
+	}
+	function coldfluallergies() {
+		cold_count = cold_count + 1;
+		alert("Cold Count: " + cold_count);
+		flu_count = flu_count + 1;
+		alert("Flu Count: " + flu_count);
+		allergy_count = allergy_count + 1
+		alert("Allergy Count: " + allergy_count);
+	}
+	function coldallergies() {
+		cold_count = cold_count + 1;
+		alert("Cold Count: " + cold_count);
+		allergy_count = allergy_count + 1
+		alert("Allergy Count: " + allergy_count);
+	}
+	function covidcoldallergies() {
+		covid19_count = covid19_count + 1;
+		alert("Covid-19 Count: " + covid19_count);
+		cold_count = cold_count + 1;
+		alert("Cold Count: " + cold_count);
+		allergy_count = allergy_count + 1
+		alert("Allergy Count: " + allergy_count);
+	}	
 	function results() {
 		var total  = covid19_count + cold_count + flu_count + allergy_count;
 		alert("Covid-19 percentage: " + (covid19_count / total) * 100 +
 		      "\Cold percentage: " + (cold_count / total) * 100 +
 		      "\Flu percentage: " + (flu_count / total) * 100 +
 		      "\Allergy percentage: " + (allergy_count / total) * 100);
-	}		  
+	}
 </script>
 
 
