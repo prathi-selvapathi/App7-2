@@ -344,9 +344,22 @@ Having trouble adding the code to resize the image, and I can't seem to get the 
 	<p>DIY!</p>
 </footer>
 
+<!-- This produces the new question for question 5 with buttons. w3-btn w3-black makes it a black button. onclick="fluAdd() adds one count to your flu count if you click on yes, and onclick="coldAdd() adds one count to your cold count if you click on no. -->
+<div class="page" id="five">
+	<div class="w3-container w3-flat-carrot">
+		<h1>Question 5</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+	<p>How often do you have a runny or stuff nose?</p>
+	<a href="#six" class="w3-btn w3-black" onclick="covidAdd();"> rarely </a>
+	<a href="#six" class="w3-btn w3-black" onclick="coldallergyAdd();"> commonly </a>
+	<a href="#six" class="w3-btn w3-black" onclick="fluAdd();"> sometimes </a>
+	</div>
+
 
 <!-- This produces the results page -->
-<div class="page" id="five">
+<div class="page" id="twelve">
 	<!-- This produces the header with the title "Results" and an orange color -->
 	<div id="header" class="w3-bottom w3-container w3-flat-carrot">
 		<h1>Results</h1>
