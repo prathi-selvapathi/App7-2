@@ -19,8 +19,7 @@ Brief Description of Goal of Code:
 This goal will help an individual determine if they have Coronavirus, the cold, the flu, or seasonal allergies.
  
 Known Issues:
-Having trouble adding the code to resize the image, and I can't seem to get the results to work without it popping up as an alert
--->
+Having trouble actually getting the bar graph to work on the results page. My idea to display my results was to have a bar graph show the percentages calculated from answering the questions about the syptoms. 
 
    <head> 
       <title>Symptoms Chart</title>  
@@ -37,37 +36,37 @@ Having trouble adding the code to resize the image, and I can't seem to get the 
 	var flu_count = 0;
 	var allergy_count = 0
 
-        function covid19Add(){
+        function covid19Add(){ // adds one count to Covid-19
        		covid19_count = covid19_count + 1;
 	}
-	function coldAdd() {
+	function coldAdd() { // adds one count to Cold
 		cold_count = cold_count + 1;
 	}
-	function fluAdd() {
+	function fluAdd() { // adds one count to Flu
 		flu_count = flu_count + 1;
 	}
-	function allergyAdd() {
+	function allergyAdd() { // adds one count to Allergy
 		allergy_count = allergy_count + 1
 	}
-	function covidfluAdd() {
+	function covidfluAdd() { // adds one count to Covid-19 and Flu because the symptom pertains to multiple conditions
 		covid19_count += 1;
 		flu_count += 1;
 	}
-	function coldfluallergyAdd() {
+	function coldfluallergyAdd() { // adds one count to Cold, Flu, and Allergy because the symptoms pertains to multiple conditions
 		cold_count = cold_count + 1;
 		flu_count = flu_count + 1;
 		allergy_count = allergy_count + 1
 	}
-	function coldallergyAdd() {
+	function coldallergyAdd() { // adds one count to Cold and Allergy because the symptoms pertain to multiple conditions
 		cold_count = cold_count + 1;
 		allergy_count = allergy_count + 1
 	}
-	function covidcoldallergyAdd() {
+	function covidcoldallergyAdd() { // adds one count to Covid-19, Cold, and Allergy because the symptoms pertain to multiple conditions
 		covid19_count = covid19_count + 1;
 		cold_count = cold_count + 1;
 		allergy_count = allergy_count + 1
 	}	
-	function BarGraph() {
+	function BarGraph() { // function for the bar graph to display results
 		var chart = new CanvasJS.Chart("chartContainer", {
 			animationEnabled: true,
 	
