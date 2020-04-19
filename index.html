@@ -67,15 +67,35 @@ Having trouble adding the code to resize the image, and I can't seem to get the 
 		cold_count = cold_count + 1;
 		allergy_count = allergy_count + 1
 	}	
-	function results() {
-		var total  = covid19_count + cold_count + flu_count + allergy_count;
-		alert("Covid-19 percentage: " + (covid19_count / total) * 100 +
-		      "\Cold percentage: " + (cold_count / total) * 100 +
-		      "\Flu percentage: " + (flu_count / total) * 100 +
-		      "\Allergy percentage: " + (allergy_count / total) * 100);
+	function BarGraph() {
+		var chart = new CanvasJS.Chart("chartContainer", {
+	animationEnabled: true,
+	
+	title:{
+		text:"Symptoms Chart"
+	},
+	axisX:{
+		interval: 1
+	},
+	axisY2:{
+		interlacedColor: "rgba(1,77,101,.2)",
+		gridColor: "rgba(1,77,101,.1)",
+		title: "Percentage"
+	},
+	data: [{
+		type: "bar",
+		name: "Symptoms",
+		axisYType: "secondary",
+		color: "#014D65",
+		dataPoints: [
+			{ y: (covid19_count / total) * 100, label: "Covid-19" },
+			{ y: (cold_count / total) * 100, label: "Cold" },
+			{ y: (flu_count / total) * 100, label: "Flu" },
+			{ y: (allergy_count / total) * 100, label: "Allergy" },
+		]
+	}]
 	}
 </script>
-
 
 <!-- This produces the footer and the header. This also codes for the formatting of the page. It is coded with <style> for formatting-->
 
@@ -636,10 +656,23 @@ Having trouble adding the code to resize the image, and I can't seem to get the 
 	<div id="header" class="w3-bottom w3-container w3-flat-carrot">
 		<h1>Results</h1>
 	</div>
+	<div id="content" class="w3-container">
+	<!-- This codes for the canvas placed on the home page of the website. It has a width of 300 and a height of 225 to fit within the screen. There is a border to this canvas that is coded as style. The canvas id is "a" and this id is used throughout all the functions for the buttons -->
+		<canvas id="a" width="300" height="225" style="border:1px solid #000000"></canvas>
+	<!-- This codes for the function to draw the rectangle inside the canvas. It is coded with "a" for the id of the canvas. The title of the function is "draw_a". (50,25,150,100) are the coordinates for where the rectangle will be placed on the canvas -->
+	<script>
+		function draw_a() {
+		  var a_canvas = document.getElementById("a");
+ 		  var a_context = a_canvas.getContext("2d");
+		  a_context.fillRect(50, 25, 150, 100);
+		}
+	</script>
+	<!-- This codes for the button that will be clicked in order to draw the rectangle in the canvas. The "draw_a" is from the function above and is inputted into the onclick so that the function is embedded into the button. The button is titled "Draw Rectangle" -->
+		<button onclick="draw_a();">Draw Rectangle</button>
 	
 	<div id="content" class="w3-container">
 		<!-- This is the results -->
 		<p>Results</p>
-		<a class="w3-btn w3-black" onclick="results();"> View Results </a>
+		<a class="w3-btn w3-black" onclick="BarGraph();"> View Results </a>
 	<div>
 </div>
